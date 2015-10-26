@@ -17,13 +17,15 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+" let NERDTreeShowHidden=1
 
 set nu
 set relativenumber
 set autoindent
 set clipboard=unnamed
-set mouse=a
 
 execute pathogen#infect()
 syntax on
-filetype plugin indent on
+
+match ErrorMsg '\s\+$'
+nnoremap <F2> :%s/\s\+$//e<CR>
