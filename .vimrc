@@ -24,8 +24,12 @@ set relativenumber
 set autoindent
 set clipboard=unnamed
 
-execute pathogen#infect()
 syntax on
+execute pathogen#infect()
 
 match ErrorMsg '\s\+$'
 nnoremap <F2> :%s/\s\+$//e<CR>
+"Airline
+set ttimeoutlen=50
+set laststatus=2
+let g:airline_theme="wombat"
